@@ -5,4 +5,7 @@
 !/informatics/
 !/informatics/*.py
 !/informatics/*.cpp
+!/codeforces/
+!/codeforces/*.py
+!/codeforces/*.cpp
 
