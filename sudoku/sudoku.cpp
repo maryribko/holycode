@@ -6,6 +6,8 @@
 const int field_size = 9;
 const int square_size = 3;
 
+enum BlockType {ROW, COLUMN, SQUARE};
+
 void set_next_idx_row (int & i, int & j)
 {
     if (j < field_size-1)
@@ -65,21 +67,21 @@ void set_next_idx_square (int & i, int & j)
     j = block_j * 3 + in_block_j;  
 }
 
-void set_next_idx (const std::string & check_block_type, int & i, int & j)
+void set_next_idx (const BlockType & check_block_type, int & i, int & j)
 {
-    if (check_block_type == "row")
+    if (check_block_type == BlockType::ROW)
         set_next_idx_row (i,j);
 
-    else if (check_block_type == "column")
+    else if (check_block_type == BlockType::COLUMN)
         set_next_idx_column (i,j);
 
-    else if (check_block_type == "square")
+    else if (check_block_type == BlockType::SQUARE)
         set_next_idx_square (i,j);
 }
 
 bool is_sudoku_valid (const std::vector<std::vector<int> > & field,
-                      const std::string & check_block_type)
-{    
+                      const BlockType & check_block_type)
+{
     int i = 0;
     int j = 0;
 
@@ -116,9 +118,9 @@ int main()
             std::cin >> element;
 
     // Check through each type of block
-    bool valid = is_sudoku_valid (field, "row") &&
-                 is_sudoku_valid (field, "column") &&
-                 is_sudoku_valid (field, "square");
+    bool valid = is_sudoku_valid (field, BlockType::ROW) &&
+                 is_sudoku_valid (field, BlockType::COLUMN) &&
+                 is_sudoku_valid (field, BlockType::SQUARE);
 
     // Print result
     if (valid)
