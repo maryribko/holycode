@@ -10,4 +10,7 @@
 !/codeforces/*.cpp
 !/sudoku/
 !/sudoku/*.cpp
+!/aifil/
+!/aifil/*.py
+!/aifil/*.cpp
 
