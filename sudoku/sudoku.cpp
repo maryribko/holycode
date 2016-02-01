@@ -113,8 +113,8 @@ int main()
     std::vector<std::vector<int> > field (field_size, std::vector<int>(field_size));
 
     // Fill field from standart input
-    for (auto & raw: field)
-        for (auto & element: raw)
+    for (auto & row: field)
+        for (auto & element: row)
             std::cin >> element;
 
     // Check through each type of block
