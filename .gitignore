@@ -2,4 +2,7 @@
 !.gitignore
 !/stepic/
 !/stepic/*.cpp
+!/informatics/
+!/informatics/*.py
+!/informatics/*.cpp
 
