@@ -116,11 +116,9 @@ int main()
 			std::cin >> element;
 
 	// Check through each type of block
-	bool valid = true;
-			
-	valid &= is_sudoku_valid (field, "row");
-	valid &= is_sudoku_valid (field, "column");
-	valid &= is_sudoku_valid (field, "square");
+	bool valid = is_sudoku_valid (field, "row") &&
+                 is_sudoku_valid (field, "column") &&
+	             is_sudoku_valid (field, "square");
 	
 	// Print result
 	if (valid)
