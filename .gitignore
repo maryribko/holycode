@@ -8,4 +8,6 @@
 !/codeforces/
 !/codeforces/*.py
 !/codeforces/*.cpp
+!/sudoku/
+!/sudoku/*.cpp
 
